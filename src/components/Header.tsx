@@ -1,15 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import arrow from "../assets/images/downArrow.svg";
 import styles from '../styles/Header.module.scss';
+import { UserContext } from '../contexts/UserContext';
 
 export const Header: React.FC = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [expandGeneral, toggleExpGeneral] = useState(true);
     const [expandStudent, toggleExpStudent] = useState(false);
 
+    // const { user, updateUser } = useContext(UserContext);
+    const { user, updateUser } = useContext(UserContext);
+    const location = useLocation();
+
+    useEffect(() => setToggleMenu(false), [location]);
+
+    const openCategory = () => {
+        toggleExpStudent(!expandStudent);
+        toggleExpGeneral(!expandGeneral);
+    }
+
     return (
-        <section className={styles.header}>
+        <section className={styles.header} id = "header">
             <section className={styles.banner}>
                 <div className={styles.hamburger_wrapper}>
                     <div
@@ -26,16 +38,13 @@ export const Header: React.FC = () => {
             <div className={toggleMenu ? `${styles.menu_pane} ${styles.menu_open}` : styles.menu_pane}>
                 <ul className={styles.menu}>
                     <li className={expandGeneral ? `${styles.open} ${styles.general}` : styles.general}>
-                        <button onClick={() => toggleExpGeneral(!expandGeneral)}>
-                                <span>General</span>
-                                <img alt="" src={arrow} />
+                        <button onClick={() => openCategory()}>
+                            <span>General</span>
+                            {user !== undefined && Object.keys(user).length > 0 && <img alt="" src={arrow} />}
                         </button>
                         <ul>
                             <li>
                                 <Link to="/">Landing</Link>
-                            </li>
-                            <li>
-                                <Link to="/CreateAccount">CreateAccount</Link>
                             </li>
                             <li>
                                 <Link to="/Contact">Contact</Link>
@@ -52,41 +61,56 @@ export const Header: React.FC = () => {
                             <li>
                                 <Link to="/Services">Services</Link>
                             </li>
-                            <li>
+                        </ul>
+                    </li>
+                    {user !== undefined && Object.keys(user).length > 0 &&
+                        <li className={expandStudent ? `${styles.open} ${styles.student}` : styles.student}>
+                            <button onClick={() => openCategory()}>
+                                <span>Student</span>
+                                <img alt="" src={arrow} />
+                            </button>
+                            <ul>
+                                <li>
+                                    <Link to="/Calendar">Calendar</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Wallet">Wallet</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Settings">Settings</Link>
+                                </li>
+                                <li>
+                                    <Link to="/SchedualLesson">SchedualLesson</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Lesson">Lesson</Link>
+                                </li>
+                                <li>
+                                    <Link to="/AgreementDocs">AgreementDocs</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Dashboard">Dashboard</Link>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    {user !== undefined && Object.keys(user).length === 0 ?
+                        (<>
+                            <li className={styles.login}>
                                 <Link to="Login">Login</Link>
                             </li>
-                        </ul>
-                    </li>
-
-                    <li className={expandStudent ? `${styles.open} ${styles.student}` : styles.student}>
-                        <button onClick={() => toggleExpStudent(!expandStudent)}>
-                            <span>Student</span>
-                            <img alt="" src={arrow} />
-                        </button>
-                        <ul>
-                            <li>
-                                <Link to="/Calendar">Calendar</Link>
+                            <li className={styles.create_account}>
+                                <Link to="/Create Account">Create Account</Link>
                             </li>
-                            <li>
-                                <Link to="/Wallet">Wallet</Link>
-                            </li>
-                            <li>
-                                <Link to="/Settings">Settings</Link>
-                            </li>
-                            <li>
-                                <Link to="/SchedualLesson">SchedualLesson</Link>
-                            </li>
-                            <li>
-                                <Link to="/Lesson">Lesson</Link>
-                            </li>
-                            <li>
-                                <Link to="/AgreementDocs">AgreementDocs</Link>
-                            </li>
-                            <li>
-                                <Link to="/Dashboard">Dashboard</Link>
-                            </li>
-                        </ul>
-                    </li>
+                        </>)
+                        :
+                        <li className={styles.logout}>
+                            <Link onClick={() => {
+                                if (updateUser)
+                                    updateUser()
+                            }} to="/">Logout</Link>
+                        </li>
+                    }
                 </ul>
                 <div
                     onClick={() => setToggleMenu(!toggleMenu)}

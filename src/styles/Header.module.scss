@@ -18,12 +18,30 @@ a {
     color: black;
 }
 
+.create_account {
+    margin-top: 6%;
+}
+
+.login, .logout {
+    margin-top: 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a {
+        background-color: #bfbfbf;
+        width: 50%;
+        color: white;
+        border-radius: 12px;
+        padding: 2%;
+    }
+}
+
 .student ul li:first-of-type, .general ul li:first-of-type{
-    margin-top: 15px;
+    margin-top: 20px;
 } 
 
-li {
-    margin-bottom: 15px;
+.student ul li,  .general ul li{
+    margin-bottom: 30px;
 }
 
 li, ul {
@@ -43,10 +61,12 @@ button::-moz-focus-inner {
     border-left: none;
     border-right: none;
     border-bottom: 1px solid #ddd;
+    font-size: 1.5em;
 }
 
 .student img, .general img {
     transition: transform .5s ease;
+    height: 34px;
 }
 
 .open.student img, .open.general img {
