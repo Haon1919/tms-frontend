@@ -1,0 +1,20 @@
+.create_account form {
+    display: flex;
+    flex-direction: column
+}
+
+.birthdayLabel{
+    margin-bottom: 1px;
+    display: block;
+    text-align: left;
+}
+
+.date_picker{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    input {
+        width: 15%;
+    }
+}

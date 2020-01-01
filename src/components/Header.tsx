@@ -100,7 +100,7 @@ export const Header: React.FC = () => {
                                 <Link to="Login">Login</Link>
                             </li>
                             <li className={styles.create_account}>
-                                <Link to="/Create Account">Create Account</Link>
+                                <Link to="/CreateAccount">Create Account</Link>
                             </li>
                         </>)
                         :
