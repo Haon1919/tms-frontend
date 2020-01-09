@@ -15,7 +15,7 @@ export const Login : React.FC= () => {
                     <input id="password" name="password" type="text"/>
                 </div>
                 <Link to="/CreateAccount" id="forgot-password">Forgot your password?</Link>
-                <Link to="/Dashboard" id="login"><button>Login</button></Link>
+                <Link to="/Dashboard" id="login">Login</Link>
                 <h1>OR</h1>
                 <button><Link to="/CreateAccount">Sign Up</Link></button>
         </div>
