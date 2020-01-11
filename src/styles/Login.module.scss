@@ -7,36 +7,32 @@
     padding: 0 2vw;
     position: relative;
     margin-bottom: 4vh;
-}
-
-.username_container input {
-    width: 86vw;
-    border: none;
-    outline: 0;
-    padding: 2vh 0 0 1vh;
-    background-color: #c6c6c6;
-    height: 6vh;
-    font-size: 2.5vh;
-    color: white;
-
+    input {
+        width: 86vw;
+        border: none;
+        outline: 0;
+        padding: 2vh 0 0 1vh;
+        background-color: #c6c6c6;
+        height: 6vh;
+        font-size: 2.5vh;
+        color: white;
+    }
 }
 
 .password_container {
     padding: 0 2vw;
     position: relative;
     margin-bottom: .5vh;
-}
-
-.password_container input {
-    width: 86vw;
-    border: none;
-    outline: 0;
-    padding: 2vh 0 0 1vh;
-    background-color: #c6c6c6;
-    height: 6vh;
-    font-size: 2.5vh;
-    color: white;
-
+    input {
+        width: 86vw;
+        border: none;
+        outline: 0;
+        padding: 2vh 0 0 1vh;
+        background-color: #c6c6c6;
+        height: 6vh;
+        font-size: 2.5vh;
+        color: white;
+    }
 }
 
 label {
