@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/Login.scss";
+import styles from '../styles/Login.module.scss';
 import { UserContext } from '../contexts/UserContext';
 
 //TODO: Remove when login functionaility or a better solution for testing logins is found
@@ -37,20 +37,20 @@ export const Login : React.FC= () => {
         //     </form>
             
         // </section>
-        <div className="login_container">
+        <div className={styles.login_container}>
             
-        <div className="username-container">
+        <div className={styles.username_container}>
             <label htmlFor="username"><b>Username</b></label>
             <input id="username" name="username" type="text"/>
         </div>
-        <div className="password-container">
+        <div className={styles.password_container}>
             <label htmlFor="password"><b>Password</b></label>
             <input id="password" name="password" type="text"/>
         </div>
-        <Link to="/CreateAccount" id="forgot-password">Forgot your password?</Link>
-        <Link to="/Dashboard" id="login">Login</Link>
+        <Link to="/CreateAccount" className={styles.forgot_password}>Forgot your password?</Link>
+        <Link to="/Dashboard" id={styles.login}>Login</Link>
         <h1>OR</h1>
-        <button><Link to="/CreateAccount">Sign Up</Link></button>
+        <Link to="/CreateAccount" id={styles.create_account}>Sign Up</Link>
         </div>
     );
 }
