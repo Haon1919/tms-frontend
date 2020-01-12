@@ -1,3 +1,11 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 100px #c6c6c6 inset !important;
+    -webkit-text-fill-color: white !important;
+
+}
 .login_container{
     display: flex;
     flex-direction: column;
@@ -50,7 +58,6 @@ label {
 
 #login{
     background-color: #828282;
-    height: 9vw;
     padding-top: 1vh;
     width: 88vw;
     align-self: center;
