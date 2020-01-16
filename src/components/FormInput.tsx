@@ -3,9 +3,7 @@ import styles from '../styles/CreateAccount.module.scss';
 
 type FormData = {
     focusedInput: string,
-    day: string,
-    month: string,
-    year: string,
+    date: string,
     firstName: string,
     lastName: string,
     email: string,
@@ -38,7 +36,7 @@ export const FormInput: React.FC<FormInputProps> = ({inputChange, label, inputTy
     }
 
     const changeInputFocus = () => {
-        const action: ReducerParams = {
+         const action: ReducerParams = {
             type: "FOCUS",
             value: label,
         }
