@@ -18,11 +18,11 @@ export const Login : React.FC= () => {
     return (
         <form className={styles.login_container} onSubmit={submitLoginForm}>
         <div className={styles.username_container}>
-            <label htmlFor="username"><b>Username</b></label>
+            <label htmlFor="username" className={styles.login_label}><b>Username</b></label>
             <input id="username" name="username" type="text" onChange={e => setUsername(e.target.value)}/>
         </div>
         <div className={styles.password_container}>
-            <label htmlFor="password"><b>Password</b></label>
+            <label htmlFor="password" className={styles.login_label}><b>Password</b></label>
             <input id="password" name="password" type="password" onChange={e => setPassword(e.target.value)}/>
         </div>
         <Link to="/CreateAccount" className={styles.forgot_password}>Forgot your password?</Link>
