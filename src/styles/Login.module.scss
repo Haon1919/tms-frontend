@@ -43,7 +43,7 @@ input:-webkit-autofill:active  {
     }
 }
 
-.login_label {
+label {
     position: absolute;
     font-size: 1.6vh;
     padding: .5vh 0 0 2vw;
@@ -58,7 +58,7 @@ input:-webkit-autofill:active  {
 
 .login{
     background-color: #828282;
-    padding-top: 1vh;
+    padding-top: 1.5vh;
     width: 88vw;
     align-self: center;
     color: white;
@@ -68,8 +68,9 @@ input:-webkit-autofill:active  {
 
 .create_account{
     height: 9vw;
-    padding-top: 1vh;
+    padding-top: 1.5vh;
     width: 88vw;
+    line-height: 3.7vh;
     align-self: center;
     color: black;
     font-size: 4vh;
