@@ -1,45 +1,52 @@
 .create_account form {
-    .focusedInput {
+    .focused_input {
         input {
             margin-bottom: 2%;
         }
         label {
             text-align: center;
         }
-        height: 8vh;
+        height: 9vh;
     }    
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.inputContainer {
+.input_container {
     label {
+        &.required_input:after {
+            content:" *";
+            color: red;
+        }
         text-align: left;
-        color: white;
+        margin-left: 2%;
     }
     input {
         background-color: transparent;
-        color: white;
         outline: none;
         border: none;
         cursor: pointer;
         transition: margin-bottom .2s ease-out;
+        text-align: center;
     }
-    height: 5vh;
+    height: 7vh;
     transition: color .2s ease-in, height .2s ease-out;
     display: flex;
     flex-direction: column;
     width: 85vw;
     margin-bottom: 6%;
-    background-color: #bfbfbf;
+    border: 1px solid black;
     justify-content: space-between;
 }
 
 .submit {
+    &.disabled {
+        opacity: .4;
+    }
+    background-color: #5199a8;
+    color: white;
     width: 85vw;
-    background-color: transparent;
-    border: solid black thin;
     height: 6vh;
     margin-top: 2%;
 }
@@ -59,4 +66,14 @@
     justify-content: space-around;
     width: 85%;
     margin-bottom: 5%;
+}
+
+.form_input_wrapper {
+    span {
+        color: red;
+    }
+}
+
+.invalid_input_value {
+    border: 1px solid red;
 }
