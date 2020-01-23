@@ -1,38 +1,35 @@
-import React, {useState, useContext} from 'react';
-import { UserContext } from '../contexts/UserContext';
-
-//TODO: Remove when login functionaility or a better solution for testing logins is found
-const testLogin = {
-    userName: "John123",
-    password: "dude",
-    userInfo: {
-        id: 1,
-        firstName: "John",
-        lastName: "Doe",
-        ageClass: "ADULT"
-    }
-};
+import React, {useState, useContext, useEffect} from 'react';
+import { Link, Redirect, withRouter, useHistory } from 'react-router-dom';
+import styles from '../styles/Login.module.scss';
 
 export const Login : React.FC= () => {
-    const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [toDashboard, setToDashboard] = useState(false);
 
-    const {updateUser} = useContext(UserContext);  
+    let history = useHistory();
 
-    const loginUser = (e: React.FormEvent<HTMLFormElement>) : void => {
+    const submitLoginForm = (e : React.FormEvent) => {
         e.preventDefault();
-        if(name === testLogin.userName && password === testLogin.password && updateUser !== undefined){
-            updateUser(testLogin.userInfo);
-        }
+        console.log("submitting");
+        history.push('/Dashboard');
     }
+
     return (
-        <section>
-            <form onSubmit={loginUser}>
-                <input type="text" value={name} onChange={(e: React.FormEvent<HTMLInputElement>) => setName(e.currentTarget.value)} />   
-                <input type="password" value={password} onChange={(e: React.FormEvent<HTMLInputElement>) => setPassword(e.currentTarget.value)}/>
-                <input type="submit" value="submit"/>
-            </form>
-            
-        </section>
+        <form className={styles.login_container} onSubmit={submitLoginForm}>
+        <div className={styles.username_container}>
+            <label htmlFor="username" className={styles.login_label}><b>Username</b></label>
+            <input id="username" name="username" type="text" onChange={e => setUsername(e.target.value)}/>
+        </div>
+        <div className={styles.password_container}>
+            <label htmlFor="password" className={styles.login_label}><b>Password</b></label>
+            <input id="password" name="password" type="password" onChange={e => setPassword(e.target.value)}/>
+        </div>
+        <Link to="/CreateAccount" className={styles.forgot_password}>Forgot your password?</Link>
+        <input className={styles.login} type="submit" value="Login"/>
+        <h1>OR</h1>
+        <Link to="/CreateAccount" className={styles.create_account}>Sign Up</Link>
+
+        </form>
     );
 }
