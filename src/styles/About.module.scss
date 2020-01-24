@@ -1,0 +1,46 @@
+.aboutParagraph{
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+}
+
+.backgroundBox{
+  width: 70vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.picture{
+  width: 70vw;
+  height: 55vh;
+}
+
+.instructorImage{
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
