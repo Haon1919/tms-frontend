@@ -66,7 +66,7 @@ export const Login : React.FC= () => {
             />
         <Link to="/ForgotPassword" className={styles.forgot_password}>Forgot your password?</Link>
         <input disabled={isDisabled} className={`${styles.login} ${isDisabled ? styles.disabled : ""}`} type="submit" value="Login"/>
-        <h1>OR</h1>
+        <h3>OR</h3>
         <Link to="/CreateAccount" className={styles.create_account}>Sign Up</Link>
 
         </form>
