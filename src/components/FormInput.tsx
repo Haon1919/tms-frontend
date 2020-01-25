@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/CreateAccount.module.scss';
 
 type FormInputProps = {
     inputType: string,
@@ -9,6 +8,7 @@ type FormInputProps = {
     currentValue: string,
     selectedKey: string,
     required: boolean,
+    styles: { readonly [key: string]: string; },
     validation?: {
         failedMesg: string,
         pattern: RegExp,
@@ -39,10 +39,10 @@ export const FormInput: React.FC<FormInputProps> = (
         currentValue,
         selectedKey,
         required,
-        validation
+        validation,
+        styles
     }
 ) => {
-
     const [valueInvalid, setValueInvalid] = useState(false);
 
     //When the user is done typing, if check to see if the input is incorrect and take the appropriate action if not.

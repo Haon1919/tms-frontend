@@ -211,6 +211,7 @@ export const CreateAccount: React.FC = () => {
                     currentValue={formData.firstName}
                     selectedKey={formData.focusedInput}
                     required={true}
+                    styles={styles}
                 />
                 <FormInput
                     inputChange={dispatch}
@@ -220,6 +221,7 @@ export const CreateAccount: React.FC = () => {
                     currentValue={formData.lastName}
                     selectedKey={formData.focusedInput}
                     required={true}
+                    styles={styles}
                 />
                 <FormInput
                     inputChange={dispatch}
@@ -230,6 +232,7 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={!checkMinorStatus(formData.birthday)}
                     validation={emailValidation}
+                    styles={styles}
                 />
                 {checkMinorStatus(formData.birthday) &&
                     <FormInput
@@ -241,6 +244,7 @@ export const CreateAccount: React.FC = () => {
                         selectedKey={formData.focusedInput}
                         required={true}
                         validation={guardianValidation}
+                        styles={styles}
                     />
                 }
                 <FormInput
@@ -252,6 +256,7 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     validation={phoneValidation}
+                    styles={styles}
                 />
                 <FormInput
                     inputChange={dispatch}
@@ -261,6 +266,7 @@ export const CreateAccount: React.FC = () => {
                     currentValue={formData.password}
                     selectedKey={formData.focusedInput}
                     required={true}
+                    styles={styles}
                 />
                 <input
                     className={isDisabled ? `${styles.submit} ${styles.disabled}` : `${styles.submit}`}
