@@ -17,6 +17,10 @@
     flex-direction: column;
 }
 
+.contact_form_submitted{
+    display: none;
+}
+
 .contact_labels{
     position: absolute;
     font-size: 1.6vh;

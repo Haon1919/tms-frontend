@@ -21,7 +21,7 @@ export const Contact : React.FC= () => {
             <img className={styles.contact_image} src={whitneyAbout} alt="Whitney Twigg's Photo"/>
             <h1 className={styles.heading}>Contact Whitney</h1>
             <p className={styles.information}>I'd love to hear from you! You can email me at twiggmusicstudio@gmail.com or through the form below. There's no such thing as a silly question.</p>
-            <form className={styles.contact_form} style={{"display":(contactFormSubmitted ? "none" : "flex")}} onSubmit={submitContactForm}>
+            <form className={contactFormSubmitted ? styles.contact_form_submitted : styles.contact_form} onSubmit={submitContactForm}>
                 <div className={styles.name_field}>
                     <label className={styles.contact_labels} htmlFor="name"><b>First and Last Name</b></label>
                     <input id="name" name="name" type="text" required onChange={e => setName(e.target.value)}/>
