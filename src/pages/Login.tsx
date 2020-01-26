@@ -53,7 +53,9 @@ export const Login : React.FC= () => {
                 selectedKey={selctedInputKey}
                 required={false}
                 styles={styles}
-            />
+            >
+                <input/>
+            </FormInput>
             <FormInput
                 inputChange={handleInputChange}
                 inputKey="password"
@@ -63,7 +65,9 @@ export const Login : React.FC= () => {
                 selectedKey={selctedInputKey}
                 required={false}
                 styles={styles}
-            />
+            >
+                <input/>
+            </FormInput>
         <Link to="/ForgotPassword" className={styles.forgot_password}>Forgot your password?</Link>
         <input disabled={isDisabled} className={`${styles.login} ${isDisabled ? styles.disabled : ""}`} type="submit" value="Login"/>
         <h3>OR</h3>

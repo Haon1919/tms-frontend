@@ -212,7 +212,9 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     styles={styles}
-                />
+                    >
+                        <input/>
+                    </FormInput>
                 <FormInput
                     inputChange={dispatch}
                     inputKey="lastName"
@@ -222,7 +224,9 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     styles={styles}
-                />
+                >
+                    <input/>
+                </FormInput>
                 <FormInput
                     inputChange={dispatch}
                     label="email"
@@ -233,7 +237,9 @@ export const CreateAccount: React.FC = () => {
                     required={!checkMinorStatus(formData.birthday)}
                     validation={emailValidation}
                     styles={styles}
-                />
+                >
+                    <input />
+                </FormInput>
                 {checkMinorStatus(formData.birthday) &&
                     <FormInput
                         inputChange={dispatch}
@@ -245,7 +251,9 @@ export const CreateAccount: React.FC = () => {
                         required={true}
                         validation={guardianValidation}
                         styles={styles}
-                    />
+                    >
+                        <input/>
+                    </FormInput>
                 }
                 <FormInput
                     inputChange={phoneNumberDispatch}
@@ -257,7 +265,9 @@ export const CreateAccount: React.FC = () => {
                     required={true}
                     validation={phoneValidation}
                     styles={styles}
-                />
+                >
+                    <input/>
+                </FormInput>
                 <FormInput
                     inputChange={dispatch}
                     label="password"
@@ -267,7 +277,9 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     styles={styles}
-                />
+                >
+                    <input/>
+                </FormInput>
                 <input
                     className={isDisabled ? `${styles.submit} ${styles.disabled}` : `${styles.submit}`}
                     type="submit"
