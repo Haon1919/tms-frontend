@@ -6,9 +6,61 @@ input:-webkit-autofill:active  {
     -webkit-text-fill-color: white !important;
 
 }
-.login_container{
+
+form .focused_input {
+    input {
+        margin-bottom: 2%;
+    }
+    label {
+        text-align: center;
+    }
+    height: 9vh;
+}    
+
+.login_fail {
+    color: red;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 8%;
+}
+
+.input_container {
+    label {
+        &.required_input:after {
+            content:" *";
+            color: red;
+        }
+        text-align: left;
+        margin-left: 2%;
+    }
+    input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: margin-bottom .2s ease-out;
+        text-align: center;
+    }
+    height: 7vh;
+    transition: color .2s ease-in, height .2s ease-out;
     display: flex;
     flex-direction: column;
+    width: 85vw;
+    margin-bottom: 12%;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.login_container {
+    .title {
+        margin-bottom: 15%;
+    }
+    h1 {
+        font-size: 25px;
+    } 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .username_container {
@@ -43,7 +95,7 @@ input:-webkit-autofill:active  {
     }
 }
 
-label {
+.login_label {
     position: absolute;
     font-size: 1.6vh;
     padding: .5vh 0 0 2vw;
@@ -51,28 +103,30 @@ label {
 }
 
 .forgot_password{
-    display: flex;
+    display: block;
     margin-left: 6vw;
     margin-bottom: 3vh;
 }
 
 .login{
-    background-color: #828282;
-    padding-top: 1vh;
-    width: 88vw;
-    align-self: center;
+    &.disabled {
+        opacity: .4;
+        cursor: default;
+    }
+    background-color: #5199a8;
     color: white;
-    font-size: 4vh;
-    padding-bottom: 1.5vh;
+    width: 85vw;
+    height: 6vh;
+    margin-top: 2%;
+    font-size: 3vh;
+    cursor: pointer;
 }
 
 .create_account{
-    height: 9vw;
-    padding-top: 1vh;
-    width: 88vw;
+    height: 6vh;
+    width: 85vw;
     align-self: center;
-    color: black;
-    font-size: 4vh;
-    padding-bottom: 1.5vh;
+    font-size: 3vh;
     border: .05em solid black;
+    line-height: 5.5vh;
 }
