@@ -24,16 +24,17 @@ export const Contact : React.FC= () => {
             <form className={contactFormSubmitted ? styles.contact_form_submitted : styles.contact_form} onSubmit={submitContactForm}>
                 <div className={styles.name_field}>
                     <label className={styles.contact_labels} htmlFor="name"><b>First and Last Name</b></label>
-                    <input id="name" name="name" type="text" required onChange={e => setName(e.target.value)}/>
+                    <input name="name" type="text" required onChange={e => setName(e.target.value)}/>
                 </div>
                 <div className={styles.email_field}>
                     <label className={styles.contact_labels} htmlFor="email"><b>Email</b></label>
-                    <input id="email" name="email" type="text" required onChange={e => setEmail(e.target.value)}/>
+                    <input name="email" type="text" required onChange={e => setEmail(e.target.value)}/>
                 </div>
                 <div className={styles.message_field}>
                     <label className={styles.contact_labels} htmlFor="message"><b>Message</b></label>
-                    <textarea id="message" name="message" required onChange={e => setMessage(e.target.value)}/>
+                    <textarea name="message" value={message} required onChange={e => setMessage(e.target.value)}/>
                 </div>
+                {message}
                 <input className={styles.send} type="submit" value="Send"/>
             </form>
             <h1 className={styles.submitted_form_text} style={{"display":(contactFormSubmitted ? "block" : "none")}}>Your contact form has been submitted. Whitney will be in contact with you soon.</h1>
