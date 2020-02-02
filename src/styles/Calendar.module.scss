@@ -1,0 +1,14 @@
+.day_list {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar_row {
+    display: flex;
+    flex-direction: row;
+}
