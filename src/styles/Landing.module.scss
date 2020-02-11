@@ -5,6 +5,7 @@
 }
 
 .content p {
+  font-size: 12px;
   text-align: center;
   width: 75%;
 }
@@ -21,10 +22,16 @@
   background-size: cover;
 }
 
-button {
-  background-color: gray;
+.landing a {
+  background-color: #5199a8;
   color: white;
-  margin: 5%;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  margin-top: 2%;
+  margin-left: 5vw;
 }
 
 .headerText {
