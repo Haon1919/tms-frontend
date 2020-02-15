@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useMemo} from 'react'
 import whitneyAbout from '../assets/images/whitneyAbout.jpg';
 import styles from '../styles/Contact.module.scss';
 import textareaStyles from '../styles/ContactTextArea.module.scss';
 import { FormInput } from '../components/FormInput';
 import { InputChangeParameters } from  "../types/FormInputTypes";
 
-
+const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export const Contact : React.FC= () => {
 
@@ -13,8 +13,19 @@ export const Contact : React.FC= () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [selectedInputKey, setSelectedInputKey] = useState('')
-    //const [contactFail, setContactFail] = useState(false);
     const [contactFormSubmitted, setContactFormSubmitted] = useState(false);
+    const [failingForms, setFailingForms] = useState<string[]>([]);
+
+    const isDisabled = !!failingForms.length;
+
+
+    let emailValidation = useMemo(() => {
+        return {
+            pattern: emailPattern,
+            failedMesg: "Please provide a valid email.",
+            changeInvalidFormsList: setFailingForms
+        }
+    }, []);
 
     const submitContactForm = (e : React.FormEvent) => {
         e.preventDefault();
@@ -62,6 +73,7 @@ export const Contact : React.FC= () => {
                     currentValue={email}
                     selectedKey={selectedInputKey}
                     required={true}
+                    validation={emailValidation}
                     styles={styles}
                 >
                 <input/>
@@ -78,7 +90,7 @@ export const Contact : React.FC= () => {
                 >
                 <textarea/>
                 </FormInput>
-                <input className={styles.send} type="submit" value="Send"/>
+                <input className={isDisabled ? `${styles.send} ${styles.disabled}` : `${styles.send}`} type="submit" value="Send" disabled={isDisabled}/>
             </form>
             <h1 className={styles.submitted_form_text} style={{"display":(contactFormSubmitted ? "block" : "none")}}>Your contact form has been submitted. Whitney will be in contact with you soon.</h1>
         </section>

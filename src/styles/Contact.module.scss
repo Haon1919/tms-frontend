@@ -154,8 +154,12 @@ form .focused_input {
 
 }
 
+.disabled {
+    opacity: .4;
+}
+
 .send{
-    background-color: #828282;
+    background-color: #5199a8;
     padding-top: .5vh;
     width: 88vw;
     align-self: center;
