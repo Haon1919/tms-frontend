@@ -1,0 +1,25 @@
+.blog_container{
+    border: 1px solid black;
+    width: 80vw;
+    margin-top: 6vh;
+}
+
+.blog_image{
+    width: 70vw;
+    margin: 3vh 0;
+}
+
+.blog_snippet{
+    width: 70vw;
+    margin: auto;
+}
+
+.blog_link{
+    background-color: #5199a8;
+    color: white;
+    width: 85vw;
+    height: 6vh;
+    margin-top: 2%;
+    font-size: 3vh;
+    cursor: pointer;
+}
