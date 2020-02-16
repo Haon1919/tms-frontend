@@ -12,7 +12,7 @@ export const Blog : React.FC= () => {
             </div>
 
             <BlogItem/>
-
+            <BlogItem/>
             {/* We will have to dynamically make a Blog Item Component for every post eventually */}
         </section>
     );
