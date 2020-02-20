@@ -80,13 +80,13 @@ export const Header: React.FC = () => {
                                     <Link to="/Settings">Settings</Link>
                                 </li>
                                 <li>
-                                    <Link to="/SchedualLesson">SchedualLesson</Link>
+                                    <Link to="/SchedualLesson">Schedule Lesson</Link>
                                 </li>
                                 <li>
                                     <Link to="/Lesson">Lesson</Link>
                                 </li>
                                 <li>
-                                    <Link to="/AgreementDocs">AgreementDocs</Link>
+                                    <Link to="/AgreementDocs">Agreement Docs</Link>
                                 </li>
                                 <li>
                                     <Link to="/Dashboard">Dashboard</Link>
