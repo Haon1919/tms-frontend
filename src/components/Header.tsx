@@ -97,7 +97,7 @@ export const Header: React.FC = () => {
                     {user !== undefined && Object.keys(user).length === 0 ?
                         (<>
                             <li className={styles.login}>
-                                <Link to="Login">Login</Link>
+                                <Link to="/Login">Login</Link>
                             </li>
                             <li className={styles.create_account}>
                                 <Link to="/CreateAccount">Create Account</Link>
