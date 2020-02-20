@@ -1,0 +1,73 @@
+.picture{
+    width: 70vw;
+  }
+  
+.instructor_image{
+  
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.background_box{
+    width: 70vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute;
+  
+    background: rgba(0, 0, 0, 0.52);
+}
+
+.service_description{
+    margin: 3vh 5vw 3vh 5vw;
+    font-size: 2vh;
+}
+
+.violin_lessons{
+}
+
+.lesson_type{
+    margin: 3vh 0 2vh 0;
+}
+
+.service_info{
+    display:flex;
+    justify-content: space-between
+}
+
+.services_time_period{
+    float: left;
+    margin: 2vh 0 0 6vw;
+    font-size: 2.5vh;
+}
+
+.services_price{
+    float: right;
+    margin: 2vh 6vw 0 0;
+    font-size: 2.5vh;
+}
+
+.enroll{
+    height: 6vh;
+    width: 50vw;
+    align-self: center;
+    font-size: 3vh;
+    line-height: 5.5vh;
+    display: inline-block;
+    margin: 5vh 4vw 5vh 4vw;
+    color: white;
+    background-color: #5199a8;
+}
