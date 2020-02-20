@@ -106,8 +106,12 @@ export const Header: React.FC = () => {
                         :
                         <li className={styles.logout}>
                             <Link onClick={() => {
-                                if (updateUser)
-                                    updateUser()
+                                if (updateUser){
+                                    updateUser();
+                                    if(expandStudent) {
+                                        openCategory();
+                                    }
+                                }
                             }} to="/">Logout</Link>
                         </li>
                     }
