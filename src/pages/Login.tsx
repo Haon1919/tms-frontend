@@ -1,8 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import styles from '../styles/Login.module.scss';
 import { FormInput } from '../components/FormInput';
 import { InputChangeParameters } from  "../types/FormInputTypes";
+import { UserContext } from '../contexts/UserContext';
+
+const testUser = {
+    username: "Test",
+    password: "dude",
+    userInfo: {
+        id: 1,
+        firstName: "John",
+        lastName: "Doe",
+        ageClass: "ADULT"
+    }
+}
 
 export const Login : React.FC= () => {
     const [username, setUsername] = useState("");
@@ -11,7 +23,7 @@ export const Login : React.FC= () => {
     const [loginFail, setLoginFail] = useState(false);
 
     let history = useHistory();
-
+    const {updateUser} = useContext(UserContext);  
     const isDisabled = username === "" || password === "";
 
     const submitLoginForm = (e : React.FormEvent) => {
@@ -19,8 +31,12 @@ export const Login : React.FC= () => {
         //TODO: When login successful set necessary user information then navigate to dashboard.
         // history.push('/Dashboard');
         //TODO: If login fails because the user provided incorrect credentials set loginFail to true and remove the password.
-        setLoginFail(true);
-        setPassword("");
+        if(username === testUser.username && password === testUser.password && updateUser !== undefined) {
+            updateUser(testUser.userInfo);
+        } else {
+            setLoginFail(true);
+            setPassword("");
+        }
     }
 
     const handleInputChange = (action: InputChangeParameters) => {
