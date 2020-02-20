@@ -96,6 +96,7 @@ button span, button img {
     top: 10vh;
     display: flex;    
     flex-direction: row;
+    z-index: 1;
 }
 
 .menu_pane a {
