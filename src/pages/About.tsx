@@ -7,7 +7,7 @@ export const About : React.FC = () => {
         <section>
             <h1>Meet the Instructor</h1>
             <div className={styles.instructorImage}>
-                <img src={whitneyAbout}/>
+                <img className={styles.picture} src={whitneyAbout}/>
                 <div className={styles.backgroundBox}>
                     <p className={styles.instructorName}>
                         Whitney Twigg

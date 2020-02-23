@@ -1,9 +1,12 @@
 import React, {useState, useContext} from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import styles from '../styles/Login.module.scss';
+import { FormInput } from '../components/FormInput';
+import { InputChangeParameters } from  "../types/FormInputTypes";
 import { UserContext } from '../contexts/UserContext';
 
-//TODO: Remove when login functionaility or a better solution for testing logins is found
-const testLogin = {
-    userName: "John123",
+const testUser = {
+    username: "Test",
     password: "dude",
     userInfo: {
         id: 1,
@@ -11,28 +14,81 @@ const testLogin = {
         lastName: "Doe",
         ageClass: "ADULT"
     }
-};
+}
 
 export const Login : React.FC= () => {
-    const [name, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [selctedInputKey, setSelectedInputKey] = useState("");
+    const [loginFail, setLoginFail] = useState(false);
 
+    let history = useHistory();
     const {updateUser} = useContext(UserContext);  
+    const isDisabled = username === "" || password === "";
 
-    const loginUser = (e: React.FormEvent<HTMLFormElement>) : void => {
+    const submitLoginForm = (e : React.FormEvent) => {
         e.preventDefault();
-        if(name === testLogin.userName && password === testLogin.password && updateUser !== undefined){
-            updateUser(testLogin.userInfo);
+        //TODO: When login successful set necessary user information then navigate to dashboard.
+        // history.push('/Dashboard');
+        //TODO: If login fails because the user provided incorrect credentials set loginFail to true and remove the password.
+        if(username === testUser.username && password === testUser.password && updateUser !== undefined) {
+            updateUser(testUser.userInfo);
+        } else {
+            setLoginFail(true);
+            setPassword("");
         }
     }
+
+    const handleInputChange = (action: InputChangeParameters) => {
+        if(loginFail) {
+            setLoginFail(false);
+        }
+        if(action.type === "UPDATEFORM"){
+            if(action.formDataKey === "username") {
+                setUsername(action.value);
+            } else {
+                setPassword(action.value);
+            }
+        } else if(action.type === "FOCUS"){
+            setSelectedInputKey(action.value);
+        }
+    }
+
     return (
-        <section>
-            <form onSubmit={loginUser}>
-                <input type="text" value={name} onChange={(e: React.FormEvent<HTMLInputElement>) => setName(e.currentTarget.value)} />   
-                <input type="password" value={password} onChange={(e: React.FormEvent<HTMLInputElement>) => setPassword(e.currentTarget.value)}/>
-                <input type="submit" value="submit"/>
-            </form>
-            
-        </section>
+        <form className={styles.login_container} onSubmit={submitLoginForm}>
+            <h1 className={styles.title}>Twigg Music Studio Login</h1>
+            {loginFail && 
+                <p className = {styles.login_fail}>Uhoh! The username or password you entered did not match our records. Please double check and try again!</p>
+            }
+            <FormInput
+                inputChange={handleInputChange}
+                inputKey="username"
+                label="Username"
+                inputType="text"
+                currentValue={username}
+                selectedKey={selctedInputKey}
+                required={false}
+                styles={styles}
+            >
+                <input/>
+            </FormInput>
+            <FormInput
+                inputChange={handleInputChange}
+                inputKey="password"
+                label="Password"
+                inputType="password"
+                currentValue={password}
+                selectedKey={selctedInputKey}
+                required={false}
+                styles={styles}
+            >
+                <input/>
+            </FormInput>
+        <Link to="/ForgotPassword" className={styles.forgot_password}>Forgot your password?</Link>
+        <input disabled={isDisabled} className={`${styles.login} ${isDisabled ? styles.disabled : ""}`} type="submit" value="Login"/>
+        <h3>OR</h3>
+        <Link to="/CreateAccount" className={styles.create_account}>Sign Up</Link>
+
+        </form>
     );
 }

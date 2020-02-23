@@ -1,0 +1,132 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 100px #c6c6c6 inset !important;
+    -webkit-text-fill-color: white !important;
+
+}
+
+form .focused_input {
+    input {
+        margin-bottom: 2%;
+    }
+    label {
+        text-align: center;
+    }
+    height: 9vh;
+}    
+
+.login_fail {
+    color: red;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 8%;
+}
+
+.input_container {
+    label {
+        &.required_input:after {
+            content:" *";
+            color: red;
+        }
+        text-align: left;
+        margin-left: 2%;
+    }
+    input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: margin-bottom .2s ease-out;
+        text-align: center;
+    }
+    height: 7vh;
+    transition: color .2s ease-in, height .2s ease-out;
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin-bottom: 12%;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.login_container {
+    .title {
+        margin-bottom: 15%;
+    }
+    h1 {
+        font-size: 25px;
+    } 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.username_container {
+    padding: 0 2vw;
+    position: relative;
+    margin-bottom: 4vh;
+    input {
+        width: 86vw;
+        border: none;
+        outline: 0;
+        padding: 2vh 0 0 1vh;
+        background-color: #c6c6c6;
+        height: 6vh;
+        font-size: 2.5vh;
+        color: white;
+    }
+}
+
+.password_container {
+    padding: 0 2vw;
+    position: relative;
+    margin-bottom: .5vh;
+    input {
+        width: 86vw;
+        border: none;
+        outline: 0;
+        padding: 2vh 0 0 1vh;
+        background-color: #c6c6c6;
+        height: 6vh;
+        font-size: 2.5vh;
+        color: white;
+    }
+}
+
+.login_label {
+    position: absolute;
+    font-size: 1.6vh;
+    padding: .5vh 0 0 2vw;
+    color: white
+}
+
+.forgot_password{
+    display: block;
+    margin-left: 6vw;
+    margin-bottom: 3vh;
+}
+
+.login{
+    &.disabled {
+        opacity: .4;
+        cursor: default;
+    }
+    background-color: #5199a8;
+    color: white;
+    width: 85vw;
+    height: 6vh;
+    margin-top: 2%;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+.create_account{
+    height: 6vh;
+    width: 85vw;
+    align-self: center;
+    font-size: 3vh;
+    border: .05em solid black;
+    line-height: 5.5vh;
+}
