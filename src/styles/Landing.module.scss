@@ -1,0 +1,57 @@
+.content{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.content p {
+  font-size: 12px;
+  text-align: center;
+  width: 75%;
+}
+
+.picture{
+  width: 70vw;
+  height: 55vh;
+}
+
+.background div {
+  width: 100%;
+  height: 30vh;
+  background-image: url("../assets/images/whitneyLanding.jpg");
+  background-size: cover;
+}
+
+.landing a {
+  background-color: #5199a8;
+  color: white;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  margin-top: 2%;
+  margin-left: 5vw;
+}
+
+.headerText {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column;
+}
+
+.headerText h1, h2 {
+  color: white;
+}
+
+.headerText h1 {
+  font-size: 20px;
+  margin-bottom: .1vh;
+  margin-left: 5vw
+}
+
+.headerText h2 {
+  font-size: 12px;
+  margin-bottom: .1vh;
+  margin-left: 5vw
+}
