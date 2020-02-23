@@ -1,4 +1,4 @@
-import React, {useState, useRef, createRef, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import styles from '../styles/Calendar.module.scss';
 import moment from 'moment';
