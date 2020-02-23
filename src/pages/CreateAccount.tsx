@@ -1,4 +1,4 @@
-import React, { useReducer, useState, useMemo } from 'react';
+import React, { useReducer, useState, useMemo, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import styles from '../styles/CreateAccount.module.scss';
 import { FormInput } from '../components/FormInput';
@@ -48,7 +48,7 @@ function createAccountReducer(state: FormData, action: ReducerParams) {
 
 function checkMinorStatus(birthday: string): boolean {
     //Check to see if the user is above the age of 18
-    return moment(birthday).isAfter(moment().subtract(18, 'years'));
+    return moment(new Date(birthday)).isAfter(moment().subtract(18, 'years'));
 }
 
 export const CreateAccount: React.FC = () => {
@@ -84,6 +84,13 @@ export const CreateAccount: React.FC = () => {
         }
     }, []);
 
+    //If the birthday changes, check and see if the user is a minor. Depending on the status remove any non required fields.
+    useEffect(() => {
+        if(!checkMinorStatus(formData.birthday) && failingForms.indexOf("guardian email") !== -1) {
+            let filteredList = failingForms.filter(f => f !== "guardian email");
+            setFailingForms(filteredList);
+        }
+    }, [failingForms, formData.birthday]);
 
     const changeDate = (date: Date) => {
         const action: ReducerParams = {
@@ -212,7 +219,9 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     styles={styles}
-                />
+                    >
+                        <input/>
+                    </FormInput>
                 <FormInput
                     inputChange={dispatch}
                     inputKey="lastName"
@@ -222,7 +231,9 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     styles={styles}
-                />
+                >
+                    <input/>
+                </FormInput>
                 <FormInput
                     inputChange={dispatch}
                     label="email"
@@ -233,7 +244,9 @@ export const CreateAccount: React.FC = () => {
                     required={!checkMinorStatus(formData.birthday)}
                     validation={emailValidation}
                     styles={styles}
-                />
+                >
+                    <input />
+                </FormInput>
                 {checkMinorStatus(formData.birthday) &&
                     <FormInput
                         inputChange={dispatch}
@@ -245,7 +258,9 @@ export const CreateAccount: React.FC = () => {
                         required={true}
                         validation={guardianValidation}
                         styles={styles}
-                    />
+                    >
+                        <input/>
+                    </FormInput>
                 }
                 <FormInput
                     inputChange={phoneNumberDispatch}
@@ -257,7 +272,9 @@ export const CreateAccount: React.FC = () => {
                     required={true}
                     validation={phoneValidation}
                     styles={styles}
-                />
+                >
+                    <input/>
+                </FormInput>
                 <FormInput
                     inputChange={dispatch}
                     label="password"
@@ -267,7 +284,9 @@ export const CreateAccount: React.FC = () => {
                     selectedKey={formData.focusedInput}
                     required={true}
                     styles={styles}
-                />
+                >
+                    <input/>
+                </FormInput>
                 <input
                     className={isDisabled ? `${styles.submit} ${styles.disabled}` : `${styles.submit}`}
                     type="submit"

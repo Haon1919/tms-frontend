@@ -1,0 +1,46 @@
+.calendar {
+    height: 100vh;
+}
+
+.month_list {
+    overflow: scroll;
+    min-height: 8%;
+}
+.day_list {
+    li {
+        width: 14%;
+    }
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar_container {
+    height: 69vh;
+}
+
+.month {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.calendar_row {
+    li {
+        a {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        border: 1px solid black;
+        width: 14%;
+        overflow: hidden;
+    }
+    display: flex;
+    flex-direction: row;
+    height: 17%
+}
+
+.non_targt_date {
+    color: rgba($color: #000000, $alpha: .5);
+}
