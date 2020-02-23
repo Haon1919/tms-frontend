@@ -80,13 +80,13 @@ export const Header: React.FC = () => {
                                     <Link to="/Settings">Settings</Link>
                                 </li>
                                 <li>
-                                    <Link to="/SchedualLesson">SchedualLesson</Link>
+                                    <Link to="/SchedualLesson">Schedule Lesson</Link>
                                 </li>
                                 <li>
                                     <Link to="/Lesson">Lesson</Link>
                                 </li>
                                 <li>
-                                    <Link to="/AgreementDocs">AgreementDocs</Link>
+                                    <Link to="/AgreementDocs">Agreement Docs</Link>
                                 </li>
                                 <li>
                                     <Link to="/Dashboard">Dashboard</Link>
@@ -97,7 +97,7 @@ export const Header: React.FC = () => {
                     {user !== undefined && Object.keys(user).length === 0 ?
                         (<>
                             <li className={styles.login}>
-                                <Link to="Login">Login</Link>
+                                <Link to="/Login">Login</Link>
                             </li>
                             <li className={styles.create_account}>
                                 <Link to="/CreateAccount">Create Account</Link>
@@ -106,8 +106,12 @@ export const Header: React.FC = () => {
                         :
                         <li className={styles.logout}>
                             <Link onClick={() => {
-                                if (updateUser)
-                                    updateUser()
+                                if (updateUser){
+                                    updateUser();
+                                    if(expandStudent) {
+                                        openCategory();
+                                    }
+                                }
                             }} to="/">Logout</Link>
                         </li>
                     }

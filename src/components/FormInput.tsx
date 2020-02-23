@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/CreateAccount.module.scss';
 
 type FormInputProps = {
     inputType: string,
@@ -9,11 +8,13 @@ type FormInputProps = {
     currentValue: string,
     selectedKey: string,
     required: boolean,
+    styles: { readonly [key: string]: string; },
     validation?: {
         failedMesg: string,
         pattern: RegExp,
         changeInvalidFormsList: React.Dispatch<React.SetStateAction<string[]>>;
-    }
+    },
+    children: React.ReactElement
 }
 
 let checkInputValidationTimeout: ReturnType<typeof setTimeout>;
@@ -39,10 +40,11 @@ export const FormInput: React.FC<FormInputProps> = (
         currentValue,
         selectedKey,
         required,
-        validation
+        validation,
+        styles, 
+        children
     }
 ) => {
-
     const [valueInvalid, setValueInvalid] = useState(false);
 
     //When the user is done typing, if check to see if the input is incorrect and take the appropriate action if not.
@@ -53,7 +55,7 @@ export const FormInput: React.FC<FormInputProps> = (
             }
             checkInputValidationTimeout = setTimeout(() => {
                 let isValid = validation.pattern.test(currentValue);
-                if (!isValid) {
+                if (!isValid && currentValue !== "") {
                     validation.changeInvalidFormsList(prevList => {
                         if (prevList.indexOf(label) === -1) {
                             return [...prevList, label]
@@ -67,13 +69,12 @@ export const FormInput: React.FC<FormInputProps> = (
                     });
                 }
                 setValueInvalid(!isValid && currentValue !== "");
-                
             }, 1000);
         }
     }, [validation, currentValue, required, label]);
 
     const changeInputData = (e: React.FormEvent<HTMLInputElement>): void => {
-        setValueInvalid(false);
+        if(valueInvalid) setValueInvalid(false);
         const action = {
             type: "UPDATEFORM",
             value: e.currentTarget.value,
@@ -89,6 +90,7 @@ export const FormInput: React.FC<FormInputProps> = (
         }
         inputChange(action);
     }
+    
     return (
         <div className={styles.form_input_wrapper}>
             {(validation !== undefined && valueInvalid) &&
@@ -97,13 +99,15 @@ export const FormInput: React.FC<FormInputProps> = (
             <div
                 className={`${styles.input_container} ${inputKey === selectedKey ? styles.focused_input : ""} ${valueInvalid ? styles.invalid_input_value : ""}`}>
                 <label className={required ? styles.required_input : ""}>{label}</label>
-                <input
-                    onFocus={changeInputFocus}
-                    onChange={changeInputData}
-                    type={inputType}
-                    value={currentValue}
-                    onBlur={changeInputFocus}
-                />
+                { React.cloneElement(children, 
+                    { 
+                        onFocus: changeInputFocus,
+                        onChange: changeInputData,
+                        type: inputType,
+                        value: currentValue,
+                        onBlur: changeInputFocus
+                    })
+                }
             </div>
         </div>
     );
