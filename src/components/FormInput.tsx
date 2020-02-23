@@ -55,7 +55,7 @@ export const FormInput: React.FC<FormInputProps> = (
             }
             checkInputValidationTimeout = setTimeout(() => {
                 let isValid = validation.pattern.test(currentValue);
-                if (!isValid) {
+                if (!isValid && currentValue !== "") {
                     validation.changeInvalidFormsList(prevList => {
                         if (prevList.indexOf(label) === -1) {
                             return [...prevList, label]
