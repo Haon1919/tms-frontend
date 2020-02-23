@@ -1,0 +1,31 @@
+.blog_container{
+    border: 1px solid black;
+    width: 80vw;
+    margin-top: 6vh;
+}
+
+.blog_title{
+    margin: 0 0 1vh 0;
+}
+
+.blog_image{
+    width: 70vw;
+    margin: 3vh 0;
+}
+
+.blog_snippet{
+    width: 65vw;
+    margin: auto;
+}
+
+.blog_link{
+    height: 6vh;
+    width: 50vw;
+    align-self: center;
+    font-size: 3vh;
+    line-height: 5.5vh;
+    display: inline-block;
+    margin: 3vh 4vw 3vh 4vw;
+    color: white;
+    background-color: #5199a8;
+}
