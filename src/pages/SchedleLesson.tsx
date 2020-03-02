@@ -7,10 +7,10 @@ import {
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import moment from 'moment';
-import styles from '../styles/SchedualLesson.module.scss';
+import styles from '../styles/ScheduleLesson.module.scss';
 import {useHistory, Link} from 'react-router-dom';
 
-export const SchedualLesson : React.FC= () => {
+export const ScheduleLesson : React.FC= () => {
     let {date} = useParams();
 
     let history = useHistory();
@@ -19,8 +19,8 @@ export const SchedualLesson : React.FC= () => {
         history.push("/Calendar");
     }
     return (
-        <section className={styles.schedual_lesson}>
-            <h1>Schedual Lesson</h1>
+        <section className={styles.schedule_lesson}>
+            <h1>Schedule Lesson</h1>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <DatePicker
                     onChange={()=>console.log("hello")}
