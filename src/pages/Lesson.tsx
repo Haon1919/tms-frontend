@@ -66,9 +66,6 @@ const checkboxStyles = makeStyles(() =>
     createStyles({
         root: {
             marginTop: '5vh',
-        },
-        colorPrimary: {
-            backgroundColor: '#bfbfbf'
         }
     }),
 );
