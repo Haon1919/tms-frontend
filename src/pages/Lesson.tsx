@@ -7,7 +7,6 @@ import ClearIcon from '@material-ui/icons/Clear';
 import Dialog from '@material-ui/core/Dialog';
 import Snackbar from '@material-ui/core/Snackbar';
 import AlertTitle from '@material-ui/lab/AlertTitle';
-import MuiAlert, { AlertProps } from '@material-ui/lab/Alert';
 import Alert from '@material-ui/lab/Alert';
 import styles from '../styles/Lesson.module.scss';
 import moment from 'moment';
@@ -43,7 +42,7 @@ type Lesson = {
     4: Lesson with empty homework notes and no parent notes,
     5: Lesson that is within the 24 hour cut off window for lesson cancelations
 */
-const exampleLesson: Lesson = lessonTypes[0];
+const exampleLesson: Lesson = lessonTypes[5];
 
 //Remove once network request to fetch lesson is implemented. 
 function fetchLesson(id: number): Promise<Lesson> {
@@ -54,7 +53,7 @@ function fetchLesson(id: number): Promise<Lesson> {
 
 function updateLesson(ts: TimeSlot): Promise<Number> {
     return new Promise((resolve) => {
-        resolve(500);
+        resolve(200);
     });
 }
 
