@@ -1,0 +1,144 @@
+Date : 2020-02-24 14:25:48
+Directory : c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend
+Total : 85 files,  20325 codes, 111 comments, 327 blanks, all 20763 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          4 |     17,658 |          0 |          4 |     17,662 |
+| TypeScript React |         41 |      1,556 |         45 |        154 |      1,755 |
+| SCSS             |         20 |        861 |         11 |        125 |        997 |
+| TypeScript       |          6 |        139 |         32 |         20 |        191 |
+| XML              |          9 |         33 |          0 |          0 |         33 |
+| Markdown         |          1 |         25 |          0 |         20 |         45 |
+| JavaScript       |          2 |         21 |          0 |          1 |         22 |
+| HTML             |          1 |         20 |         23 |          1 |         44 |
+| CSS              |          1 |         12 |          0 |          2 |         14 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                   | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                      |         85 |     20,325 |        111 |        327 |     20,763 |
+| .idea                                                                                                  |          4 |         28 |          0 |          0 |         28 |
+| public                                                                                                 |          2 |         45 |         23 |          2 |         70 |
+| src                                                                                                    |         74 |      2,576 |         88 |        302 |      2,966 |
+| src\assets                                                                                             |          4 |          4 |          0 |          0 |          4 |
+| src\assets\images                                                                                      |          4 |          4 |          0 |          0 |          4 |
+| src\components                                                                                         |          4 |        240 |         14 |         20 |        274 |
+| src\contexts                                                                                           |          1 |          4 |          0 |          1 |          5 |
+| src\pages                                                                                              |         17 |      1,009 |         21 |         95 |      1,125 |
+| src\styles                                                                                             |         20 |        861 |         11 |        125 |        997 |
+| src\tests                                                                                              |         18 |        228 |          2 |         27 |        257 |
+| src\tests\About                                                                                        |          1 |          9 |          0 |          1 |         10 |
+| src\tests\AgreementDocs                                                                                |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Blog                                                                                         |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Calendar                                                                                     |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Contact                                                                                      |          1 |          9 |          0 |          1 |         10 |
+| src\tests\CreateAccount                                                                                |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Dashboard                                                                                    |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Header                                                                                       |          2 |         73 |          2 |          9 |         84 |
+| src\tests\Landing                                                                                      |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Lesson                                                                                       |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Login                                                                                        |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Resources                                                                                    |          1 |          9 |          0 |          1 |         10 |
+| src\tests\SchedualLesson                                                                               |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Services                                                                                     |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Settings                                                                                     |          1 |          9 |          0 |          1 |         10 |
+| src\tests\Wallet                                                                                       |          1 |          9 |          0 |          1 |         10 |
+| src\types                                                                                              |          3 |         36 |          0 |          4 |         40 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                               | language         | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\misc.xml                                   | XML              |          6 |          0 |          0 |          6 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\modules.xml                                | XML              |          8 |          0 |          0 |          8 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\tms-frontend.iml                           | XML              |          8 |          0 |          0 |          8 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\vcs.xml                                    | XML              |          6 |          0 |          0 |          6 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\README.md                                        | Markdown         |         25 |          0 |         20 |         45 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\jest.config.js                                   | JavaScript       |         18 |          0 |          0 |         18 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\package-lock.json                                | JSON             |     17,552 |          0 |          1 |     17,553 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\package.json                                     | JSON             |         56 |          0 |          1 |         57 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\public\index.html                                | HTML             |         20 |         23 |          1 |         44 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\public\manifest.json                             | JSON             |         25 |          0 |          1 |         26 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\App.tsx                                      | TypeScript React |         67 |          5 |          9 |         81 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\downArrow.svg                  | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\leftArrow.svg                  | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\rightArrow.svg                 | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\upArrow.svg                    | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\BlogItem.tsx                      | TypeScript React |         15 |          1 |          4 |         20 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\Footer.tsx                        | TypeScript React |          9 |          0 |          2 |         11 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\FormInput.tsx                     | TypeScript React |         94 |         12 |          8 |        114 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\Header.tsx                        | TypeScript React |        122 |          1 |          6 |        129 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\contexts\UserContext.ts                      | TypeScript       |          4 |          0 |          1 |          5 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\index.css                                    | CSS              |         12 |          0 |          2 |         14 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\index.tsx                                    | TypeScript React |         12 |          3 |          3 |         18 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\logo.svg                                     | XML              |          1 |          0 |          0 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\About.tsx                              | TypeScript React |         23 |          0 |          1 |         24 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\AgreementDocs.tsx                      | TypeScript React |          7 |          0 |          2 |          9 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Blog.tsx                               | TypeScript React |         17 |          0 |          2 |         19 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Calendar.tsx                           | TypeScript React |        163 |          2 |         16 |        181 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Contact.tsx                            | TypeScript React |         89 |          0 |          9 |         98 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\CreateAccount.tsx                      | TypeScript React |        279 |          4 |         16 |        299 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Dashboard.tsx                          | TypeScript React |          7 |          0 |          2 |          9 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\ForgotPassword.tsx                     | TypeScript React |         56 |          0 |         11 |         67 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Landing.tsx                            | TypeScript React |         24 |          0 |          2 |         26 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Lesson.tsx                             | TypeScript React |        105 |         12 |         11 |        128 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\LessonManagement.tsx                   | TypeScript React |         10 |          0 |          3 |         13 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Login.tsx                              | TypeScript React |         85 |          3 |          7 |         95 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Resources.tsx                          | TypeScript React |          7 |          0 |          2 |          9 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\SchedleLesson.tsx                      | TypeScript React |         51 |          0 |          6 |         57 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Services.tsx                           | TypeScript React |         72 |          0 |          1 |         73 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Settings.tsx                           | TypeScript React |          7 |          0 |          2 |          9 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Wallet.tsx                             | TypeScript React |          7 |          0 |          2 |          9 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\react-app-env.d.ts                           | TypeScript       |          0 |          1 |          1 |          2 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\serviceWorker.ts                             | TypeScript       |         99 |         31 |         14 |        144 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\setupTests.js                                | JavaScript       |          3 |          0 |          1 |          4 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\About.module.scss                     | SCSS             |         36 |          0 |         11 |         47 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\AgreementDocs.module.scss             | SCSS             |          0 |          0 |          1 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\App.module.scss                       | SCSS             |          3 |          0 |          1 |          4 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Blog.module.scss                      | SCSS             |         20 |          0 |          3 |         23 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\BlogItem.module.scss                  | SCSS             |         27 |          0 |          4 |         31 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Calendar.module.scss                  | SCSS             |         41 |          0 |          5 |         46 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Contact.module.scss                   | SCSS             |        155 |          0 |         15 |        170 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\ContactTextArea.module.scss           | SCSS             |         32 |          0 |          1 |         33 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\CreateAccount.module.scss             | SCSS             |         73 |          0 |          6 |         79 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Dashboard.module.scss                 | SCSS             |          0 |          0 |          1 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\ForgotPassword.module.scss            | SCSS             |         56 |          0 |          5 |         61 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Header.module.scss                    | SCSS             |        149 |         11 |         30 |        190 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Landing.module.scss                   | SCSS             |         48 |          0 |          7 |         55 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Lesson.module.scss                    | SCSS             |         28 |          0 |          6 |         34 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Login.module.scss                     | SCSS             |        121 |          0 |         11 |        132 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Resources.module.scss                 | SCSS             |          0 |          0 |          1 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\ScheduleLesson.module.scss            | SCSS             |         12 |          0 |          1 |         13 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Services.module.scss                  | SCSS             |         60 |          0 |         14 |         74 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Settings.module.scss                  | SCSS             |          0 |          0 |          1 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Wallet.module.scss                    | SCSS             |          0 |          0 |          1 |          1 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\About\About.test.tsx                   | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\AgreementDocs\AgreementDocs.test.tsx   | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\App.test.tsx                           | TypeScript React |         20 |          0 |          3 |         23 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Blog\Blog.test.tsx                     | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Calendar\Calendar.test.tsx             | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Contact\Contact.test.tsx               | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\CreateAccount\CreateAccount.test.tsx   | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Dashboard\Dashboard.test.tsx           | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Header\ContextValueWrapper.tsx         | TypeScript React |         32 |          0 |          2 |         34 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Header\Header.test.tsx                 | TypeScript React |         41 |          2 |          7 |         50 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Landing\Landing.test.tsx               | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Lesson\Lesson.test.tsx                 | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Login\Login.test.tsx                   | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Resources\Resources.test.tsx           | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\SchedualLesson\SchedualLesson.test.tsx | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Services\Services.test.tsx             | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Settings\Settings.test.tsx             | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Wallet\Wallet.test.tsx                 | TypeScript React |          9 |          0 |          1 |         10 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\types\CreateAccountTypes.ts                  | TypeScript       |         15 |          0 |          1 |         16 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\types\FormInputTypes.ts                      | TypeScript       |          5 |          0 |          0 |          5 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\types\UserTypes.ts                           | TypeScript       |         16 |          0 |          3 |         19 |
+| c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\tsconfig.json                                    | JSON             |         25 |          0 |          1 |         26 |
+| Total                                                                                                  |                  |     20,325 |        111 |        327 |     20,763 |
++--------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

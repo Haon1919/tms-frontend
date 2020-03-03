@@ -12,7 +12,8 @@ const testUser = {
         id: 1,
         firstName: "John",
         lastName: "Doe",
-        ageClass: "ADULT"
+        ageClass: "ADULT",
+        isParent: false
     }
 }
 
