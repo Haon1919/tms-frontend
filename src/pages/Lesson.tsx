@@ -11,26 +11,12 @@ import Alert from '@material-ui/lab/Alert';
 import styles from '../styles/Lesson.module.scss';
 import moment from 'moment';
 import CustomExpansionPanel from '../components/CustomExpansionPanel';
-import TimeslotSelect from '../components/TimeslotSelect';
+import SelectBox from '../components/SelectBox';
+import {UpdateLesson, TimeSlot} from '../types/LessonTypes';
 
 //Remove import once network request to fetch lesson is implemented
 import lessonTypes from "../assets/JSON/lessonVariations";
 
-type TimeSlot = {
-    startTime: string,
-    endTime: string
-};
-
-type Lesson = {
-    startTime: string,
-    endTime: string,
-    instructor: string,
-    homeworkNotes: string,
-    parentNotes?: string
-    openSlots: TimeSlot[]
-}
-
-//TODO: Add button to update lesson and success and error snackbars from material ui
 
 //Remove once network request to fetch lesson is implemented. 
 /* 
@@ -42,10 +28,10 @@ type Lesson = {
     4: Lesson with empty homework notes and no parent notes,
     5: Lesson that is within the 24 hour cut off window for lesson cancelations
 */
-const exampleLesson: Lesson = lessonTypes[5];
+const exampleLesson: UpdateLesson = lessonTypes[1];
 
 //Remove once network request to fetch lesson is implemented. 
-function fetchLesson(id: number): Promise<Lesson> {
+function fetchLesson(id: number): Promise<UpdateLesson> {
     return new Promise((resolve) => {
         resolve(exampleLesson);
     });
@@ -53,12 +39,12 @@ function fetchLesson(id: number): Promise<Lesson> {
 
 function updateLesson(ts: TimeSlot): Promise<Number> {
     return new Promise((resolve) => {
-        resolve(200);
+        resolve(400);
     });
 }
 
-function formatTime(startTime: string, endTime: string) {
-    return `${moment(new Date(startTime)).format("h:mmA")}-${moment(new Date(endTime)).format("h:mmA")}`;
+function formatTime(ts : TimeSlot) {
+    return `${moment(new Date(ts.startTime)).format("h:mmA")}-${moment(new Date(ts.endTime)).format("h:mmA")}`;
 }
 
 const checkboxStyles = makeStyles(() =>
@@ -70,7 +56,7 @@ const checkboxStyles = makeStyles(() =>
 );
 
 export const Lesson: React.FC = () => {
-    const [lesson, setLesson] = useState<Lesson | null>(null);
+    const [lesson, setLesson] = useState<UpdateLesson | null>(null);
     const [afterCancelationCutoff, setAfterCancelationCutoff] = useState(false);
     const [selectedTsIndex, setSelectedTsIndex] = useState(-1);
     const [cancelLesson, setCancelLesson] = useState(false);
@@ -153,7 +139,6 @@ export const Lesson: React.FC = () => {
     }
 
     if (lesson === null || selectedTsIndex === -1) return null;
-
     return (
         <section className={styles.lesson}>
             <h1>Lesson</h1>
@@ -192,14 +177,15 @@ export const Lesson: React.FC = () => {
             <div className={styles.time_picker}>
                 <h2>{moment().isBefore(moment(lesson.startTime).subtract(24, "hours")) ? "Update Timeslot" : "Timeslot"}</h2>
                 {moment().isBefore(moment(lesson.startTime).subtract(24, "hours")) ? (
-                    <TimeslotSelect
-                        lesson={lesson}
-                        selectedTimeslot={selectedTsIndex}
-                        handleTimeslotChange={handleTimeslotChange}
+                    <SelectBox
+                        items={lesson.openSlots}
+                        currentValue={selectedTsIndex}
+                        handleItemSelect={handleTimeslotChange}
+                        formatInput={formatTime}
                     />
 
                 ) : (
-                        <div>{formatTime(lesson.startTime, lesson.endTime)}</div>
+                        <div>{formatTime(lesson)}</div>
                     )}
             </div>
 
