@@ -1,0 +1,37 @@
+.resources {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.linkContainer{
+  width: 100%;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row;
+}
+
+.linkContainer h1 {
+  width: 50vw;
+  margin-left: 2vw;
+}
+
+.resources h1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.linkContainer a {
+  background-color: #5199a8;
+  color: white;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  margin-top: 2%;
+  margin-left: 5vw;
+}
