@@ -28,7 +28,7 @@ import lessonTypes from "../assets/JSON/lessonVariations";
     4: Lesson with empty homework notes and no parent notes,
     5: Lesson that is within the 24 hour cut off window for lesson cancelations
 */
-const exampleLesson: UpdateLesson = lessonTypes[1];
+const exampleLesson: UpdateLesson = lessonTypes[5];
 
 //Remove once network request to fetch lesson is implemented. 
 function fetchLesson(id: number): Promise<UpdateLesson> {
@@ -39,7 +39,7 @@ function fetchLesson(id: number): Promise<UpdateLesson> {
 
 function updateLesson(ts: TimeSlot): Promise<Number> {
     return new Promise((resolve) => {
-        resolve(400);
+        resolve(200);
     });
 }
 

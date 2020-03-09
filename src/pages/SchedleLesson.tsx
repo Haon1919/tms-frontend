@@ -44,7 +44,7 @@ function scheduleLesson(sl: SingleLesson): Promise<number> {
         //I did this just si he linter didnt complaine about not using the parameter
         let packageId = sl.packageId
         console.log(`Submitted lesson request of package ${packageId}`);
-        resolve(200);
+        resolve(400);
     })
 }
 
@@ -132,7 +132,7 @@ export const ScheduleLesson: React.FC = () => {
                 anchorOrigin={{ vertical: "top", horizontal: "center" }}
             >
                 <Alert variant="filled" onClose={() => setScheduleSuccess(false)} severity="success">
-                    Lesson updated successfully!
+                    Lesson requested successfully!
                 </Alert>
             </Snackbar>
 
@@ -144,7 +144,7 @@ export const ScheduleLesson: React.FC = () => {
             >
                 <Alert variant="filled" onClose={() => setScheduleFaliure(false)} severity="error">
                     <AlertTitle>Uhoh!</AlertTitle>
-                    We couldnt update your lesson. Please contact your instructor or try again later.
+                    We couldnt request your lesson. Please contact your instructor or try again later.
                 </Alert>
             </Snackbar>
 
@@ -181,7 +181,7 @@ export const ScheduleLesson: React.FC = () => {
                 <p>{calculateLessonCost()}</p>
             </div>
 
-            <button onClick={handelLessonCreation} className={styles.create_lesson}>Create Lesson</button>
+            <button onClick={handelLessonCreation} className={styles.create_lesson}>Request Lesson</button>
             <Link to="/Calendar">Cancel</Link>
         </section>
     );
