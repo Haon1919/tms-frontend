@@ -200,7 +200,7 @@ export const Lesson: React.FC = () => {
                     <p>No homework notes availible</p>
                 </div>
             ) : (
-                    <CustomExpansionPanel title="Homework" details={lesson.homeworkNotes} />
+                    <CustomExpansionPanel title="Assignment" details={lesson.homeworkNotes} />
                 )}
 
             {(lesson.parentNotes !== null && lesson.parentNotes !== undefined) &&
