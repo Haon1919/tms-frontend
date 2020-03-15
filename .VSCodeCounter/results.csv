@@ -1,0 +1,87 @@
+filename, language, JavaScript, Markdown, JSON, XML, HTML, TypeScript React, CSS, TypeScript, SCSS, comment, blank, total
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\misc.xml, XML, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\modules.xml, XML, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 8
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\tms-frontend.iml, XML, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 8
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\.idea\vcs.xml, XML, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 6
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\README.md, Markdown, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 20, 45
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\jest.config.js, JavaScript, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\package-lock.json, JSON, 0, 0, 17552, 0, 0, 0, 0, 0, 0, 0, 1, 17553
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\package.json, JSON, 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 1, 57
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\public\index.html, HTML, 0, 0, 0, 0, 20, 0, 0, 0, 0, 23, 1, 44
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\public\manifest.json, JSON, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 1, 26
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\App.tsx, TypeScript React, 0, 0, 0, 0, 0, 67, 0, 0, 0, 5, 9, 81
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\downArrow.svg, XML, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\leftArrow.svg, XML, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\rightArrow.svg, XML, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\assets\images\upArrow.svg, XML, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\BlogItem.tsx, TypeScript React, 0, 0, 0, 0, 0, 15, 0, 0, 0, 1, 4, 20
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\Footer.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 2, 11
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\FormInput.tsx, TypeScript React, 0, 0, 0, 0, 0, 94, 0, 0, 0, 12, 8, 114
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\components\Header.tsx, TypeScript React, 0, 0, 0, 0, 0, 122, 0, 0, 0, 1, 6, 129
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\contexts\UserContext.ts, TypeScript, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 1, 5
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\index.css, CSS, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 2, 14
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\index.tsx, TypeScript React, 0, 0, 0, 0, 0, 12, 0, 0, 0, 3, 3, 18
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\logo.svg, XML, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\About.tsx, TypeScript React, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 1, 24
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\AgreementDocs.tsx, TypeScript React, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Blog.tsx, TypeScript React, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 2, 19
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Calendar.tsx, TypeScript React, 0, 0, 0, 0, 0, 163, 0, 0, 0, 2, 16, 181
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Contact.tsx, TypeScript React, 0, 0, 0, 0, 0, 89, 0, 0, 0, 0, 9, 98
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\CreateAccount.tsx, TypeScript React, 0, 0, 0, 0, 0, 279, 0, 0, 0, 4, 16, 299
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Dashboard.tsx, TypeScript React, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\ForgotPassword.tsx, TypeScript React, 0, 0, 0, 0, 0, 56, 0, 0, 0, 0, 11, 67
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Landing.tsx, TypeScript React, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 2, 26
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Lesson.tsx, TypeScript React, 0, 0, 0, 0, 0, 105, 0, 0, 0, 12, 11, 128
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\LessonManagement.tsx, TypeScript React, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 3, 13
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Login.tsx, TypeScript React, 0, 0, 0, 0, 0, 85, 0, 0, 0, 3, 7, 95
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Resources.tsx, TypeScript React, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\SchedleLesson.tsx, TypeScript React, 0, 0, 0, 0, 0, 51, 0, 0, 0, 0, 6, 57
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Services.tsx, TypeScript React, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 1, 73
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Settings.tsx, TypeScript React, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\pages\Wallet.tsx, TypeScript React, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\react-app-env.d.ts, TypeScript, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\serviceWorker.ts, TypeScript, 0, 0, 0, 0, 0, 0, 0, 99, 0, 31, 14, 144
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\setupTests.js, JavaScript, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\About.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 36, 0, 11, 47
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\AgreementDocs.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\App.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Blog.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 3, 23
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\BlogItem.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 4, 31
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Calendar.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 41, 0, 5, 46
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Contact.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 155, 0, 15, 170
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\ContactTextArea.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 32, 0, 1, 33
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\CreateAccount.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 73, 0, 6, 79
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Dashboard.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\ForgotPassword.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 56, 0, 5, 61
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Header.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 149, 11, 30, 190
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Landing.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 7, 55
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Lesson.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 6, 34
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Login.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 121, 0, 11, 132
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Resources.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\ScheduleLesson.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 1, 13
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Services.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 14, 74
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Settings.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\styles\Wallet.module.scss, SCSS, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\About\About.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\AgreementDocs\AgreementDocs.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\App.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 3, 23
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Blog\Blog.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Calendar\Calendar.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Contact\Contact.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\CreateAccount\CreateAccount.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Dashboard\Dashboard.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Header\ContextValueWrapper.tsx, TypeScript React, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 2, 34
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Header\Header.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 41, 0, 0, 0, 2, 7, 50
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Landing\Landing.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Lesson\Lesson.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Login\Login.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Resources\Resources.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\SchedualLesson\SchedualLesson.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Services\Services.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Settings\Settings.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\tests\Wallet\Wallet.test.tsx, TypeScript React, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 1, 10
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\types\CreateAccountTypes.ts, TypeScript, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 1, 16
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\types\FormInputTypes.ts, TypeScript, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 5
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\src\types\UserTypes.ts, TypeScript, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 3, 19
+c:\Users\noahi\Desktop\Projects\Capstone\tms-frontend\tsconfig.json, JSON, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 1, 26
+Total, -, 21, 25, 17658, 33, 20, 1556, 12, 139, 861, 111, 327, 20763

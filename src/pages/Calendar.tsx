@@ -14,6 +14,9 @@ type lesson = {
     type: string
 }
 
+//TODO: Put a some kind of visual indecator arround the current day. 
+//TODO: Put a some kind of visual indecator aon past lessons, current lessons, and future lessons
+
 const getLessonDates = () => {
     let id = 1;
     let lessons : lesson[] = [];
@@ -98,7 +101,7 @@ export const Calendar: React.FC = () => {
             let lesson = fetchLesson(lessons, x);
             rowElements.push(
                 <li key={id++}>
-                    <Link to = {lesson === null ? `/SchedualLesson/${moment().date(x).format("")}` : `/Lesson/${lesson.lessonId}`}>
+                    <Link to = {lesson === null ? `/ScheduleLesson/${moment().date(x).format("")}` : `/Lesson/${lesson.lessonId}`}>
                         {x + 1}
                         {lesson !== null &&
                             <span>{lesson.type}</span>
