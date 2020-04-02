@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from  'enzyme';
-import { SchedualLesson } from '../../pages/SchedualLesson';
+import { ScheduleLesson } from '../../pages/ScheduleLesson';
 
-describe('SchedualLesson page', () => {
+describe('ScheduleLesson page', () => {
     it('should render without errors', () => {
-        const wrapper = shallow(<SchedualLesson/>);
+        const wrapper = shallow(<ScheduleLesson/>);
         expect(wrapper.find('section').length).toBeGreaterThanOrEqual(1);
     });
 });

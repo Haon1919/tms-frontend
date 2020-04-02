@@ -7,7 +7,6 @@ import { UserContext } from '../contexts/UserContext';
 import Requests from '../Requests';
 import {User} from '../types/UserTypes';
 
-
 export const Login : React.FC= () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
