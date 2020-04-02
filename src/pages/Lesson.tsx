@@ -228,7 +228,7 @@ export const Lesson: React.FC = () => {
                 {moment().isBefore(moment(lesson.endTime)) &&
                     <button onClick={handleLessonUpdate} className={styles.cancel_lesson}>Update Lesson</button>
                 }
-                <Link to="/Calendar">View All Lessons</Link>
+                <Link className={styles.view_all_lessons} to="/Calendar">View All Lessons</Link>
             </div>
         </section>
     );
