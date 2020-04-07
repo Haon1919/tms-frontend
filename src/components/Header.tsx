@@ -126,5 +126,3 @@ export const Header: React.FC = () => {
         </section>
     )
 }
-
-export default Header;
