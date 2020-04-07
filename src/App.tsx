@@ -21,6 +21,8 @@ import { Login } from './pages/Login';
 import {ForgotPassword} from './pages/ForgotPassword';
 import { TextResourceView } from './components/TextResourceView';
 import { userMeta } from './types/UserTypes';
+import { User } from './types/UserTypes';
+
 
 //Components
 import { Header } from './components/Header';
@@ -30,9 +32,7 @@ import { UserContext } from './contexts/UserContext';
 
 
 const App: React.FC = () => {
-  //TODO: Populate context with user info when the page refreshes if the correct info exists in the cookie.
-  const updateUserContext = function (userInfo?: userMeta): void {
-    //TODO: Write a method to extract information from the cookie to populate the context
+  const updateUserContext = function (userInfo?: User): void {
     if (userInfo !== undefined) {
       updateContext({
         ...context,
