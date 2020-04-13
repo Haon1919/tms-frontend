@@ -13,13 +13,13 @@ import { AgreementDocs } from './pages/AgreementDocs';
 import { About } from './pages/About';
 import { Lesson } from './pages/Lesson';
 import { Resources } from './pages/Resources';
-import { SchedualLesson } from './pages/SchedualLesson';
+import { ScheduleLesson } from './pages/SchedleLesson';
 import { Services } from './pages/Services';
 import { Settings } from './pages/Settings';
 import { Wallet } from './pages/Wallet';
 import { Login } from './pages/Login';
 import {ForgotPassword} from './pages/ForgotPassword';
-import { userMeta } from './types/UserTypes';
+import { User } from './types/UserTypes';
 
 //Components
 import { Header } from './components/Header';
@@ -29,9 +29,7 @@ import { UserContext } from './contexts/UserContext';
 
 
 const App: React.FC = () => {
-  //TODO: Populate context with user info when the page refreshes if the correct info exists in the cookie.
-  const updateUserContext = function (userInfo?: userMeta): void {
-    //TODO: Write a method to extract information from the cookie to populate the context
+  const updateUserContext = function (userInfo?: User): void {
     if (userInfo !== undefined) {
       updateContext({
         ...context,
@@ -65,7 +63,7 @@ const App: React.FC = () => {
           <Route path="/About" component={About} />
           <Route path="/Lesson/:lessonId" component={Lesson} />
           <Route path="/Resources" component={Resources} />
-          <Route path="/SchedualLesson/:date?" component={SchedualLesson} />
+          <Route path="/ScheduleLesson/:date?" component={ScheduleLesson} />
           <Route path="/Services" component={Services} />
           <Route path="/Settings" component={Settings} />
           <Route path="/Wallet" component={Wallet} />

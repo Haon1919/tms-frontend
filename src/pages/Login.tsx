@@ -4,22 +4,14 @@ import styles from '../styles/Login.module.scss';
 import { FormInput } from '../components/FormInput';
 import { InputChangeParameters } from  "../types/FormInputTypes";
 import { UserContext } from '../contexts/UserContext';
-
-const testUser = {
-    username: "Test",
-    password: "dude",
-    userInfo: {
-        id: 1,
-        firstName: "John",
-        lastName: "Doe",
-        ageClass: "ADULT"
-    }
-}
+import Requests from '../Requests';
+import {User} from '../types/UserTypes';
 
 export const Login : React.FC= () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [selctedInputKey, setSelectedInputKey] = useState("");
+    const [errorText, setErrorText] = useState("");
     const [loginFail, setLoginFail] = useState(false);
 
     let history = useHistory();
@@ -28,15 +20,27 @@ export const Login : React.FC= () => {
 
     const submitLoginForm = (e : React.FormEvent) => {
         e.preventDefault();
-        //TODO: When login successful set necessary user information then navigate to dashboard.
-        // history.push('/Dashboard');
-        //TODO: If login fails because the user provided incorrect credentials set loginFail to true and remove the password.
-        if(username === testUser.username && password === testUser.password && updateUser !== undefined) {
-            updateUser(testUser.userInfo);
-        } else {
-            setLoginFail(true);
-            setPassword("");
+        const credentials = {
+            email: username,
+            password: password
         }
+        Requests.login(credentials).then((res : any) => {
+            if(updateUser !== undefined) {
+                updateUser(res.data.user);
+                history.push("/Calendar");
+            }
+        }).catch(err  => {
+            let errorText = "";
+            switch(err.response.status) {
+                case 401:
+                    errorText = "Uhoh! The username or password you entered did not match our records. Please double check and try again!"
+                    break;
+                default:
+                    errorText = "Oops! Something went wrong on our end. Please notify your instructor or try again later."
+            }
+            setErrorText(errorText);
+            setLoginFail(true);
+        });
     }
 
     const handleInputChange = (action: InputChangeParameters) => {
@@ -58,7 +62,7 @@ export const Login : React.FC= () => {
         <form className={styles.login_container} onSubmit={submitLoginForm}>
             <h1 className={styles.title}>Twigg Music Studio Login</h1>
             {loginFail && 
-                <p className = {styles.login_fail}>Uhoh! The username or password you entered did not match our records. Please double check and try again!</p>
+                <p className = {styles.login_fail}>{errorText}</p>
             }
             <FormInput
                 inputChange={handleInputChange}
