@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import arrow from "../assets/images/downArrow.svg";
 import styles from '../styles/Header.module.scss';
+import Request from '../Requests';
 import { UserContext } from '../contexts/UserContext';
 
 export const Header: React.FC = () => {
@@ -19,7 +20,6 @@ export const Header: React.FC = () => {
         toggleExpStudent(!expandStudent);
         toggleExpGeneral(!expandGeneral);
     }
-
     return (
         <section className={styles.header} id = "header">
             <section className={styles.banner}>
@@ -80,7 +80,7 @@ export const Header: React.FC = () => {
                                     <Link to="/Settings">Settings</Link>
                                 </li>
                                 <li>
-                                    <Link to="/SchedualLesson">Schedule Lesson</Link>
+                                    <Link to="/ScheduleLesson">Schedule Lesson</Link>
                                 </li>
                                 <li>
                                     <Link to="/Lesson">Lesson</Link>
@@ -106,7 +106,8 @@ export const Header: React.FC = () => {
                         :
                         <li className={styles.logout}>
                             <Link onClick={() => {
-                                if (updateUser){
+                                if (updateUser && user !== undefined && 'id' in user){
+                                    Request.logout(user.id)
                                     updateUser();
                                     if(expandStudent) {
                                         openCategory();
@@ -125,5 +126,3 @@ export const Header: React.FC = () => {
         </section>
     )
 }
-
-export default Header;
