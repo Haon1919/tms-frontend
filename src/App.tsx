@@ -19,8 +19,11 @@ import { Settings } from './pages/Settings';
 import { Wallet } from './pages/Wallet';
 import { Login } from './pages/Login';
 import {ForgotPassword} from './pages/ForgotPassword';
+import { TextResourceView } from './components/TextResourceView';
+import { userMeta } from './types/UserTypes';
 import { User } from './types/UserTypes';
 import {LessonPlan} from './pages/LessonPlan';
+
 
 //Components
 import { Header } from './components/Header';
@@ -70,6 +73,7 @@ const App: React.FC = () => {
           <Route path="/Wallet" component={Wallet} />
           <Route path="/Login" component={Login} />
           <Route path="/ForgotPassword" component={ForgotPassword}/>
+          <Route path="/TextResource" component={TextResourceView}/>
           <Route path="/LessonPlan" component={LessonPlan}/>
         </Switch>
       </div>
