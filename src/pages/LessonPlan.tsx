@@ -85,7 +85,7 @@ export const LessonPlan : React.FC= () => {
                             placeholder="08:00 AM"
                             mask="__:__ _M"
                             value={startTime}
-                            onChange={date => setStartTime(date)}
+                            onChange={date => console.log("dateChanged")}
                         />
                         <KeyboardTimePicker
                             label="EndTime Time"
