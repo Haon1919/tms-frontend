@@ -9,6 +9,26 @@ export const LessonPlan : React.FC= () => {
     const [startTime, setStartTime] = useState(new Date());
     const [endTime, setEndTime] = useState(new Date());
 
+    const days = [{
+        1: {day:"Monday",
+        openSlots: [{
+            startTime: "00:00:00",
+            endTime: "00:00:00",
+            instructor: {
+                id: 1,
+                name: "Whitney",
+            },
+            exceptions: [
+                "none",
+            ],
+        },
+
+        ]},
+        2: {
+
+        }
+    }];
+
     useEffect(()=>{
         console.log(selectedDays, "why no log?");
     }, [selectedDays]);
