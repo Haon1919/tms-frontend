@@ -80,12 +80,6 @@ export const Header: React.FC = () => {
                                     <Link to="/Settings">Settings</Link>
                                 </li>
                                 <li>
-                                    <Link to="/ScheduleLesson">Schedule Lesson</Link>
-                                </li>
-                                <li>
-                                    <Link to="/Lesson">Lesson</Link>
-                                </li>
-                                <li>
                                     <Link to="/AgreementDocs">Agreement Docs</Link>
                                 </li>
                                 <li>
