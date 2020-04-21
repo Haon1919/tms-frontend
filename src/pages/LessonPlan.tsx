@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react'
 import DateFnsUtils from "@date-io/date-fns";
 import {KeyboardTimePicker, MuiPickersUtilsProvider} from "@material-ui/pickers";
 import styles from '../styles/LessonPlan.module.scss';
+import Requests from '../Requests';
 
 export const LessonPlan : React.FC= () => {
 
     const [selectedDays, setSelectedDays] = useState([]);
-    const [startTime, setStartTime] = useState(new Date());
-    const [endTime, setEndTime] = useState(new Date());
+    const [terms, setTerms] = useState([]);
 
     const days = [{
         1: {day:"Monday",
@@ -28,6 +28,10 @@ export const LessonPlan : React.FC= () => {
 
         }
     }];
+
+    useEffect(() => {
+        setTerms(Requests.getOpenTerms());
+    }, []);
 
     useEffect(()=>{
         console.log(selectedDays, "why no log?");
@@ -99,40 +103,11 @@ export const LessonPlan : React.FC= () => {
             {selectedDays.map((day: React.ReactNode) =>
                 <div>
                 <h1>{day}</h1>
-                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                        <KeyboardTimePicker
-                            label="Start Time"
-                            placeholder="08:00 AM"
-                            mask="__:__ _M"
-                            value={startTime}
-                            onChange={date => console.log("dateChanged")}
-                        />
-                        <KeyboardTimePicker
-                            label="EndTime Time"
-                            placeholder="08:00 AM"
-                            mask="__:__ _M"
-                            value={startTime}
-                            onChange={date => console.log("dateChanged")}
-                        />
-                    </MuiPickersUtilsProvider>
+                    <select>
+                        <option>1</option>
+                    </select>
                 </div>
             )}
-            {/*<MuiPickersUtilsProvider utils={DateFnsUtils}>*/}
-            {/*    <KeyboardTimePicker*/}
-            {/*        label="Start Time"*/}
-            {/*        placeholder="08:00 AM"*/}
-            {/*        mask="__:__ _M"*/}
-            {/*        value={new Date()}*/}
-            {/*        onChange={date => console.log("dateChanged")}*/}
-            {/*    />*/}
-            {/*    <KeyboardTimePicker*/}
-            {/*        label="EndTime Time"*/}
-            {/*        placeholder="08:00 AM"*/}
-            {/*        mask="__:__ _M"*/}
-            {/*        value={new Date()}*/}
-            {/*        onChange={date => console.log("dateChanged")}*/}
-            {/*    />*/}
-            {/*</MuiPickersUtilsProvider>*/}
         </section>
     );
 }
