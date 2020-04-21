@@ -58,7 +58,7 @@ export const ResetPassword = () => {
                     inputChange={handleInputChange}
                     inputKey="password"
                     label="Password"
-                    inputType="text"
+                    inputType="password"
                     currentValue={password}
                     selectedKey={selectedInputKey}
                     required={true}
@@ -70,7 +70,7 @@ export const ResetPassword = () => {
                     inputChange={handleInputChange}
                     inputKey="verifyPassword"
                     label="Verify Password"
-                    inputType="text"
+                    inputType="password"
                     currentValue={verifyPassword}
                     selectedKey={selectedInputKey}
                     required={true}
