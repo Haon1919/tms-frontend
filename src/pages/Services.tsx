@@ -29,42 +29,34 @@ export const Services: React.FC = () => {
             <section className={styles.violin_lessons}>
                 <h2 className={styles.lesson_type}>Violin Lessons</h2>
                 <div className={styles.service_info}>
-                    <span className={styles.services_time_period}><b>1/2 Hour</b></span>
-                    <span className={styles.services_price}><b>$15</b></span>
+                    <p className={styles.services_time_period}><b>1/2 Hour</b></p>
                 </div>
                 <div className={styles.service_info}>
                     <span className={styles.services_time_period}><b>1 Hour</b></span>
-                    <span className={styles.services_price}><b>$30</b></span>
                 </div>
                 <div className={styles.service_info}>
-                    <span className={styles.services_time_period}><b>1 1/2 Hour</b></span>
-                    <span className={styles.services_price}><b>$40</b></span>
+                    <span className={styles.services_time_period}><b>1 1/2 Hours</b></span>
                 </div>
             </section>
             <section className={styles.violin_lessons}>
                 <h2 className={styles.lesson_type}>Voice Lessons</h2>
                 <div className={styles.service_info}>
                     <span className={styles.services_time_period}><b>1/2 Hour</b></span>
-                    <span className={styles.services_price}><b>$15</b></span>
                 </div>
                 <div className={styles.service_info}>
                     <span className={styles.services_time_period}><b>1 Hour</b></span>
-                    <span className={styles.services_price}><b>$25</b></span>
                 </div>
             </section>
             <section className={styles.violin_lessons}>
                 <h2 className={styles.lesson_type}>Viola Rental</h2>
                 <div className={styles.service_info}>
                     <span className={styles.services_time_period}><b>6 Months</b></span>
-                    <span className={styles.services_price}><b>$60</b></span>
                 </div>
                 <div className={styles.service_info}>
                     <span className={styles.services_time_period}><b>12 Months</b></span>
-                    <span className={styles.services_price}><b>$100</b></span>
                 </div>
                 <div className={styles.service_info}>
                     <span className={styles.services_time_period}><b>24 Months</b></span>
-                    <span className={styles.services_price}><b>$180</b></span>
                 </div>
             </section>
             <Link to="/Login" className={styles.enroll}>Enroll Today!</Link>
