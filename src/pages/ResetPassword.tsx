@@ -7,8 +7,7 @@ import Requests from '../Requests';
 import {User} from "../types/UserTypes";
 
 
-// @ts-ignore
-export const ResetPassword = () => {
+export const ResetPassword : React.FC = () => {
 
     const [password, setPassword] = useState('');
     const [verifyPassword, setVerifyPassword] = useState('');
@@ -31,7 +30,6 @@ export const ResetPassword = () => {
     //     }
     // }, []);
 
-    console.log("kijfg;ksedagflkwesajgf;k");
 
 
     useEffect(() => {
@@ -42,12 +40,19 @@ export const ResetPassword = () => {
 
     const submitResetPasswordForm = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log("submitting");
-        setResetPasswordFormSubmitted(true);
-        setTimeout(()=> {
+
+        if(user === null) return;
+
+        Requests.resetPassword(user.id, {
+            reset_password_email_id: resetPasswordEmailId,
+            password: password
+        }).then(response => {
+            setResetPasswordFormSubmitted(true);
             history.push("/Login");
-        }, 5000);
-    }
+        });
+
+
+    };
 
     const handleInputChange = (action: InputChangeParameters) => {
         if(action.type === "UPDATEFORM"){
@@ -60,7 +65,7 @@ export const ResetPassword = () => {
         }else if(action.type === "FOCUS"){
             setSelectedInputkey(action.value)
         }
-    }
+    };
 
     if(user === null) {
         return null;

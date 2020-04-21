@@ -18,6 +18,10 @@ class Requests {
     static getUserForResetPasswordEmailId(id: any) : Promise<any> {
         return axios.get(API_BASE_URL+`users/reset-password-email-id/${id}`)
     }
+
+    static resetPassword(id: any, data: {reset_password_email_id: any, password: any}) : Promise<any>{
+        return axios.put(API_BASE_URL+`users/${id}/reset-password`, data);
+    }
 }
 
 export default Requests;
