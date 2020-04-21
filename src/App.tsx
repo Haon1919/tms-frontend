@@ -73,7 +73,7 @@ const App: React.FC = () => {
           <Route path="/Wallet" component={Wallet} />
           <Route path="/Login" component={Login} />
           <Route path="/ForgotPassword" component={ForgotPassword}/>
-          <Route path="/ResetPassword" component={ResetPassword}/>
+          <Route path="/ResetPassword/:resetPasswordEmailId" component={ResetPassword}/>
           <Route path="/TextResource" component={TextResourceView}/>
         </Switch>
       </div>

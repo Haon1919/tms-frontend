@@ -1,13 +1,13 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState, useMemo, useEffect} from 'react';
 import styles from '../styles/ResetPassword.module.scss';
 import { FormInput } from '../components/FormInput';
 import { InputChangeParameters } from '../types/FormInputTypes';
-import { useHistory } from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 import Requests from '../Requests';
+import {User} from "../types/UserTypes";
 
 
-
-
+// @ts-ignore
 export const ResetPassword = () => {
 
     const [password, setPassword] = useState('');
@@ -15,6 +15,9 @@ export const ResetPassword = () => {
     const [selectedInputKey, setSelectedInputkey] = useState('');
     const [failingForms, setFailingForms] = useState<string[]>([]);
     const [resetPasswordFormSubmitted, setResetPasswordFormSubmitted]= useState(false);
+    const [user, setUser] = useState<User|null>(null);
+
+    let { resetPasswordEmailId } = useParams();
 
     const isDisabled = !!failingForms.length;
 
@@ -27,6 +30,15 @@ export const ResetPassword = () => {
     //         changeInvalidFormsList: setFailingForms
     //     }
     // }, []);
+
+    console.log("kijfg;ksedagflkwesajgf;k");
+
+
+    useEffect(() => {
+        Requests.getUserForResetPasswordEmailId(resetPasswordEmailId).then((response: any) => {
+            setUser(response.data.user);
+        }, () => history.push(""));
+    }, [resetPasswordEmailId, history]);
 
     const submitResetPasswordForm = (e: React.FormEvent) => {
         e.preventDefault();
@@ -50,11 +62,16 @@ export const ResetPassword = () => {
         }
     }
 
+    if(user === null) {
+        return null;
+    }
+
+
     return(
         <section>
             
             <form className={resetPasswordFormSubmitted ? styles.reset_password_form_submitted: styles.reset_password_form} onSubmit={submitResetPasswordForm}>
-                <h1>Want to reset your Password?</h1>
+                <h1>Hello, {user.first_name+" "+user.last_name} Want to reset your Password?</h1>
                 <p>Enter your new password in the fields below.</p>
                 <FormInput
                     inputChange={handleInputChange}
