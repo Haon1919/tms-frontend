@@ -22,6 +22,7 @@ import {ForgotPassword} from './pages/ForgotPassword';
 import { TextResourceView } from './components/TextResourceView';
 import { userMeta } from './types/UserTypes';
 import { User } from './types/UserTypes';
+import {ResetPassword} from './pages/ResetPassword';
 
 
 //Components
@@ -72,6 +73,7 @@ const App: React.FC = () => {
           <Route path="/Wallet" component={Wallet} />
           <Route path="/Login" component={Login} />
           <Route path="/ForgotPassword" component={ForgotPassword}/>
+          <Route path="/ResetPassword/:resetPasswordEmailId" component={ResetPassword}/>
           <Route path="/TextResource" component={TextResourceView}/>
         </Switch>
       </div>
