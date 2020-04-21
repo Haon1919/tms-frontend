@@ -2,6 +2,8 @@ import React, {useState, useMemo} from 'react';
 import styles from '../styles/ForgotPassword.module.scss';
 import { FormInput } from '../components/FormInput';
 import { InputChangeParameters } from '../types/FormInputTypes';
+import Requests from '../Requests';
+
 
 const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -25,7 +27,12 @@ export const ForgotPassword = () => {
     const submitForgotPasswordForm = (e: React.FormEvent) => {
         e.preventDefault();
         console.log("submitting");
-        setForgotPasswordFormSubmitted(true);
+        Requests.sendResetPasswordEmail(email).then((res : any) => {
+            setForgotPasswordFormSubmitted(true);
+
+        }).catch(err  => {
+            console.log("There was a problem!");
+        });
     }
 
     const handleInputChange = (action: InputChangeParameters) => {

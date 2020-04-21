@@ -3,6 +3,8 @@ import styles from '../styles/ResetPassword.module.scss';
 import { FormInput } from '../components/FormInput';
 import { InputChangeParameters } from '../types/FormInputTypes';
 import { useHistory } from "react-router-dom";
+import Requests from '../Requests';
+
 
 
 
